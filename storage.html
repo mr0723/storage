@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <script type='text/javascript'>
+        function myClick1(){
+            var username =  $('#username').val()
+            var password = $('#password').val()
+            // sessionStorage.setItem('k_username',username)
+            // sessionStorage.setItem('k_password',password)
+            localStorage.setItem('k_username',username)
+            localStorage.setItem('k_password',password)
+            console.log(username)
+            alert("存储成功")
+        }
+        function myClick2(){
+            // alert(sessionStorage.getItem('k_username'))
+            // alert(sessionStorage.getItem('k_password'))
+            alert(localStorage.getItem('k_username'))
+            alert(localStorage.getItem('k_password'))
+        }      
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id='username'>
+        <input type="text" id='password'>
+        <input type="button" style="width:50px;height:25px;" onclick="myClick1()"> 
+        <input type="button" style="width:50px;height:25px;" onclick="myClick2()">
+    </div>
+</body>
+</html>
